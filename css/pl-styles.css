@@ -1,0 +1,605 @@
+/*
+--------------------------------------------------
+For Flexbox put this line before any flex code
+-js-display:flex;
+--------------------------------------------------
+*/
+
+body {
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+}
+
+#wrapper{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background: url(../images/PurpleLion_BG.jpg);
+	background-size:cover;
+	overflow:hidden;
+}
+
+/* ---------------------------------------------------- */
+/* ---------------------HOME PAGE---------------------- */
+/* ---------------------------------------------------- */
+
+#logo-container
+{
+	position:absolute;
+	left:50px;
+	top:50px;
+	-js-display:flex;
+	display:flex;
+	flex-direction:column;
+}
+
+#logo-title
+{
+	font-family:'AvenirNext_Bold', sans-serif;
+	text-transform:uppercase;
+	font-size:50px;
+	letter-spacing:6px;
+	text-align:center;
+	color:white;
+}
+
+#logo-line
+{
+	position:absolute;
+	background:white;
+	height:1px;
+	width:100%;
+	top:53px;
+}
+
+#logo-subtitle
+{
+	font-family:'AvenirNext_Regular', sans-serif;
+	text-transform:uppercase;
+	font-size:22px;
+	letter-spacing:16px;
+	text-align:right;
+	color:white;
+}
+
+#logo-location
+{
+	font-family:'AvenirNext_Italic', sans-serif;
+	color:white;
+	line-height:35px;
+
+}
+
+#contact-button
+{
+	position:absolute;
+	bottom:50px;
+	right:50px;
+	z-index:1;
+	cursor:pointer;
+}
+
+#contact-text
+{
+	position:absolute;
+	right:30px;
+	color:white;
+	font-family:'AvenirNext_Demi', sans-serif;
+}
+
+#contact-close
+{
+	position:absolute;
+	right:0px;
+	width:18px;
+	height:18px;
+	background:url(../images/contact-close.png) no-repeat;
+	background-size:contain;
+	transform:rotate(45deg);
+	transition:0.4s all ease-in-out;
+}
+
+#contact-container
+{
+	position:absolute;
+	background:rgba(0, 0, 0, 0.5);
+	width:50%;
+	height:200px;
+	right:-50%;
+	bottom:0px;
+	transition:0.4s all ease-in-out;
+
+	display:flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+}
+
+.contact-label
+{
+	color:white;
+	font-family:'AvenirNext_Regular', sans-serif;
+	line-height:32px;
+	margin-left:15px;
+}
+
+.contact-input
+{
+	font-family:'AvenirNext_Regular', sans-serif;
+	margin-left:15px;
+	padding:5px;
+	border:0px;
+	border-radius:5px;
+	width:40%;
+}
+
+.contact-submit
+{
+	-webkit-appearance:none;
+	font-family:'AvenirNext_Demi', sans-serif;
+	margin-left:15px;
+	padding:5px;
+	background:white;
+	margin-top:10px;
+	border:0px;
+	width:80px;
+}
+
+#menu-button
+{
+	position:absolute;
+	top:20px;
+	right:20px;
+	background:url(../images/pl-logo.png) no-repeat;
+	background-size:contain;
+	width:70px;
+	height:70px;
+	transition:0.4s all ease-in-out;
+}
+
+#menu-container
+{
+	position:absolute;
+	overflow:hidden;
+	top:92px;
+	right:110px;
+	display:none;
+	width:150px;
+	height:0px;/*260*/
+	opacity:0;
+	background:#462890;
+	border-radius:10px;
+	padding-top:15px;
+	transition:0.4s all ease-in-out;
+}
+
+#menu-container div
+{
+	color:white;
+	font-family:'AvenirNext_Regular', sans-serif;
+	width:100%;
+	padding:15px 0px;
+	text-align:center;
+	font-size:16px;
+	transition:0.4s all ease-in-out;
+	background:url(../images/nochevron.png) no-repeat 0px 18px;
+}
+
+#menu-container div:hover
+{
+	background:url(../images/chevron.png) no-repeat 25px 18px #5a409c;
+	padding-left:15px;
+	cursor:pointer;
+}
+
+/* ---------------------------------------------------- */
+/* -----------------PRODUCT STYLES--------------------- */
+/* ---------------------------------------------------- */
+#products-container, #clients-container, #services-container, #about-container
+{
+	position:absolute;
+	top:0px;
+	left:-100%;
+	width:80%;
+	height:100%;
+	background:white;
+	transition:0.4s all ease-in-out;
+}
+
+#products-title, #services-title, #about-title, #clients-title
+{
+	float:left;
+	width:auto;
+	font-family:'AvenirNext_Demi';
+	font-size:30px;
+	margin:25px 0px 0px 20px;
+	border:1px solid black;
+	padding:5px 10px;
+}
+
+#products-flex
+{
+	margin-top:40px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:space-around;
+	align-items:flex-start;
+}
+
+#services-flex
+{
+	margin-top:30px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	align-items:flex-start;
+}
+
+.services-box
+{
+	width:30%;	
+	margin-top:20px;
+}
+
+.services-image
+{
+	float:left;
+	width:70px;
+	height:70px;
+	margin:0px 20px 0px 0px;
+}
+
+.service1 {background:url(../images/CustomWebsite.png);}
+.service2 {background:url(../images/Branding.png);}
+.service3 {background:url(../images/WebDesign.png);}
+.service4 {background:url(../images/SEO.png);}
+.service5 {background:url(../images/UserInterface.png);}
+.service6 {background:url(../images/SoftwareConsulting.png);}
+
+.services-title
+{
+	font-family:'AvenirNext_Demi';
+	font-size:20px;
+	line-height:45px;
+}
+
+.services-content
+{
+	font-family:'AvenirNext_Regular';
+	font-size:16px;
+	line-height:25px;
+}
+
+
+#products-greeksolutions, #products-news
+{
+	width:45%;
+	font-family:'AvenirNext_Regular';
+}
+
+#product1-title, #product2-title
+{
+	font-family:'AvenirNext_Demi';
+	font-size:20px;
+	line-height:45px;
+}
+
+#product1-image
+{
+	float:left;
+	width:50%;
+	height:185px;
+	background:url(../images/GSCorporate.jpg);
+	background-size:contain;
+	margin:0px 20px 0px 0px;
+}
+
+#product1-content, #product2-content
+{
+	font-size:16px;
+	line-height:25px;
+}
+
+#products-close, #services-close, #clients-close, #about-close
+{
+	position:absolute;
+	top:15px;
+	right:15px;
+	width:30px;
+	height:30px;
+	background:url(../images/close.png);
+	background-size:contain;
+}
+
+/* ---------------------------------------------------- */
+/* -----------------CLIENTS STYLE---------------------- */
+/* ---------------------------------------------------- */
+.client-image
+{
+	float:left;
+	width:100%;
+	height:200px;
+	margin:0px 20px 0px 0px;
+}
+
+.gscorporate {background:url(../images/GSCorporate.jpg) no-repeat;}
+.gsapp {background:url(../images/GSInternal.jpg) no-repeat;}
+.eclipse {background:url(../images/EclipseMattress.jpg) no-repeat;}
+.artex {background:url(../images/ArtexKnit.jpg) no-repeat;}
+.aepi {background:url(../images/DeltaRho.jpg) no-repeat;}
+
+.clientBtn
+{
+	background:#462890;
+	padding:11px 18px;
+	border-radius:6px;
+	color:white;
+	text-decoration:none;
+	letter-spacing:1px;
+	float:left;
+	font-size:13px;
+	margin:5px 10px 0px 0px;
+	cursor:pointer;
+}
+
+.client-title
+{
+	font-family:'AvenirNext_Demi';
+	font-size:20px;
+	line-height:45px;
+}
+
+.client-content
+{
+	font-family:'AvenirNext_Regular';
+	font-size:16px;
+	line-height:25px;
+}
+
+#clients-flex
+{
+	margin-top:30px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	align-items:flex-start;
+}
+
+.client-box
+{
+	font-family:'AvenirNext_Regular';
+	width:30%;	
+	margin:20px 0px 0px 3%;
+}
+
+/* ---------------------------------------------------- */
+/* -----------------ABOUT STYLE------------------------ */
+/* ---------------------------------------------------- */
+#history-title, #about-subhead
+{
+	font-family: 'AvenirNext_Demi';
+	font-size:17px;
+	color:#462890;
+	float:left;
+	width:90%;
+	margin:20px 0px 0px 20px;
+}
+
+#history-content
+{
+	font-family: 'AvenirNext_Regular';
+	font-size:14px;
+	line-height:20px;
+	float:left;
+	width:90%;
+	margin:20px 0px 0px 20px;
+}
+
+#about-flex
+{
+	margin-top:30px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	align-items:flex-start;
+}
+
+.about-profile
+{
+	width:30%;
+}
+
+#shaw-title, #jeff-title, #bailey-title
+{
+	font-family:'AvenirNext_Demi';
+	font-size:20px;
+	line-height:35px;
+}
+
+#shaw-image
+{
+	float:left;
+	width:100%;
+	height:280px;
+	background:url(../images/ShawProfile.jpg) no-repeat;
+}
+
+#jeff-image
+{
+	float:left;
+	width:100%;
+	height:280px;
+	background:url(../images/JeffProfile.jpg) no-repeat;
+}
+
+#bailey-image
+{
+	float:left;
+	width:100%;
+	height:280px;
+	background:url(../images/BaileyProfile.jpg) no-repeat;
+}
+
+#shaw-content, #jeff-content, #bailey-content
+{
+	font-family:'AvenirNext_Regular';
+	font-size:16px;
+	line-height:25px;
+}
+
+/* ---------------------------------------------------- */
+/* -----------------MEDIA QUERIES---------------------- */
+/* ---------------------------------------------------- */
+@media (max-width: 1024px) and (min-width: 768px){
+}
+
+@media (max-width: 850px){
+	#contact-container {width:100%; right:-100%;}
+
+	#products-container, #clients-container, #services-container, #about-container {width:100%; overflow-y:scroll;}
+
+	#products-flex {flex-wrap:wrap;}
+	.services-box {width:90%;}
+	.about-profile {width:90%;}
+	.client-box {width:90%;}
+	#products-greeksolutions, #products-news {width:90%;}
+}
+
+@media (max-width: 460px){
+	#logo-container {top:10px; left:0px; width:100%;}
+	#logo-title {font-size:32px;}
+	#logo-line {display:none;}
+	#logo-subtitle {font-size:20px; text-align:center; letter-spacing:9px;}
+	#logo-location {text-align:center;}
+	.caseImage1, .caseImage2 {display:none;}
+	#menu-button {top:130px;}
+	#menu-container {top:0px; width:100%; right:0px;}
+}
+
+.clear {clear:both;}
+
+
+/* ---------------------------------------------------- */
+/* -----------------OVERLAY STYLES--------------------- */
+/* ---------------------------------------------------- */
+#overlay
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0, 0.7);
+	opacity:0;
+	display:none;
+	box-shadow:0px 0px 10px #000;
+	transition:0.4s all ease-in-out;
+}
+
+#overlay-box
+{
+	position:absolute;
+	left:50%;
+	top:0px;
+	width:70%;
+	height:70%;
+	margin:5% 0px 0px -35%;
+	background:white;
+	overflow-y:scroll;
+}
+
+#overlay-title
+{
+	float:left;
+	font-family:'AvenirNext_Demi';
+	font-size:30px;
+	margin:20px 0px 0px 20px;
+}
+
+#overlay-content
+{
+	float:left;
+	font-family:'AvenirNext_Regular';
+	font-size:14px;
+	line-height:25px;
+	width:90%;
+	margin:20px 0px 0px 5%;
+}
+
+#overlay-close
+{
+	position:absolute;
+	top:10px;
+	right:10px;
+	width:30px;
+	height:30px;
+	background:url(../images/close.png);
+	background-size:contain
+}
+
+.caseImage1
+{
+	float:left;
+	margin-right:20px;
+}
+
+.caseImage2
+{
+	float:right;
+	margin-left:20px;
+}
+
+/* ---------------------------------------------------- */
+/* -------------------------FONTS---------------------- */
+/* ---------------------------------------------------- */
+@font-face {
+  font-family: 'AvenirNext_Regular';
+  src: url('../fonts/AvenirNextLTPro-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/AvenirNextLTPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/AvenirNextLTPro-Regular.svg#fa20c367c6a148cda65f50238befb5f2') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'AvenirNext_Italic';
+  src: url('../fonts/AvenirNextLTPro-It.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/AvenirNextLTPro-It.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/AvenirNextLTPro-It.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/AvenirNextLTPro-It.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/AvenirNextLTPro-It.svg#cf83888b4950ddf4d0aaf39a5b16bb1e') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'AvenirNext_Demi';
+  src: url('../fonts/AvenirNextLTPro-Demi.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/AvenirNextLTPro-Demi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/AvenirNextLTPro-Demi.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/AvenirNextLTPro-Demi.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/AvenirNextLTPro-Demi.svg#9b4c7bb97a15852a038674d2e7642256') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'AvenirNext_Bold';
+  src: url('../fonts/AvenirNextLTPro-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/AvenirNextLTPro-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/AvenirNextLTPro-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/AvenirNextLTPro-Bold.svg#add6a56a5a62396eaea1929a4942a5a6') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
